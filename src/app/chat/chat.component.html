@@ -1,0 +1,51 @@
+<div id="wrapper">
+  <div id="sidebar">
+    <!-- logged in person -->
+    <ul class="nav nav-pills">
+      <li class="dropdown" id="userTitle">
+        <div>
+          <h3 class="dropdown-toggle" data-toggle="dropdown">{{service.currentUser?.name}}
+          <span class="caret"></span></h3>
+          <ul class="dropdown-menu" id="logout-menu">
+            <li><a (click) = "logout()">Logout</a></li> 
+          </ul>
+        </div>
+      </li>
+    </ul>
+    <!-- groups -->
+    <div id="sideContent">
+        <h4>Groups</h4>
+        <p class="mylisItem" (click) = "selectChat('general')"># general</p>
+        <h4 id="directMessages">Direct Messages</h4>
+        <p class="mylisItem" *ngFor = "let user of availableUsers" (click) = "selectChat(user)">{{user?.name}}</p>
+    </div>
+  </div>
+  <div  id="mainContent">
+    <div class="page-header" id="whomChatting">
+      <h3>{{currActiveName}}</h3>
+    </div>
+    <div id="messagebody" #scrollMe >
+      <div *ngFor = "let chat of chats" class="chatMessage">  
+        <b>{{chat.msgFrom}}</b>
+        <small>- {{chat.createdOn | date:'medium'}}</small>
+        <p>{{chat.msg}}</p> 
+        <hr>
+      </div> 
+      <!-- <div class="panel panel-default" *ngFor = "let chat of chats">
+        <div class="panel-body">
+          
+        </div>
+      </div> -->
+    </div>
+    <div id="messageInput">
+      <form #messageForm = "ngForm" (ngSubmit) = "messageSubmit(messageForm.value);messageForm.reset()">
+      <div class="input-group">
+        <input type="text" class="form-control" name="message" id="message" placeholder="Search" autocomplete="false" ngModel>
+        <div class="input-group-btn">
+          <button class="btn btn-primary" type="submit">Send
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

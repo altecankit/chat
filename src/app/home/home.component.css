@@ -1,0 +1,30 @@
+#navBrand{
+	padding: 5px;
+}
+.navbar-collapse{
+	padding-top: 10px;
+}
+nav {
+	z-index: 999999;
+}
+#navBrand img{
+	width: 50px;
+	display: inline-block;
+}
+#navBrand b{
+	display: inline-block;
+	margin-left: 5px;
+}
+#loginBtn{
+	margin-right: 10px;
+}
+#opener{
+	    max-width: max-content;
+    max-height: max-content;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 35px 85px;
+}

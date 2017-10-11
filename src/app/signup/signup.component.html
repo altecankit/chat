@@ -1,0 +1,43 @@
+<div class="card myCard text-xs-center">
+  <div class="card-body">
+    <h3 class="card-title text-center">Sign up with CHAT-US</h3>
+    <p class="lead text-center">chatus.com</p>
+    <form #signupForm = "ngForm" (ngSubmit) = "signupSubmit(signupForm.value)">
+      <p>Enter your <b>name</b>, <b>email address</b> and <b>password</b></p>
+      <div class="form-group">
+        <input type="text" name="name" class="form-control" placeholder="abc" ngModel>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" class="form-control" placeholder="abc@example.com" ngModel>
+      </div>
+      <div class="form-group">
+        <input type="password" name="password" class="form-control" placeholder="password" ngModel>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-success form-control">Sign Up</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="panel myCard panel-default">
+  <div class="panel-body">
+    <h3 >Sign up with CHAT-US</h3>
+    <p class="lead text-center">chatus.com</p>
+    <form #signupForm = "ngForm" (ngSubmit) = "signupSubmit(signupForm.value)">
+      <p>Enter your <b>name</b>, <b>email address</b> and <b>password</b></p>
+      <div class="form-group">
+        <input type="text" name="name" class="form-control" placeholder="abc" ngModel>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" class="form-control" placeholder="abc@example.com" ngModel>
+      </div>
+      <div class="form-group">
+        <input type="password" name="password" class="form-control" placeholder="password" ngModel>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-success form-control">Sign Up</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="panel myCard panel-default">
+  <div class="panel-body">
+    <h3 >Sign in to CHAT-US</h3>
+    <p class="lead text-center">chatus.com</p>
+    <form #loginForm = "ngForm" (ngSubmit) = "loginSubmit(loginForm.value)">
+      <p>Enter your <b>email address</b> and <b>password</b></p>
+      <div class="form-group">
+        <input type="email" name="email" class="form-control" placeholder="abc@example.com" ngModel>
+      </div>
+      <div class="form-group">
+        <input type="password" name="password" class="form-control" placeholder="password" ngModel>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-success form-control">Login</button>
+      </div>
+    </form>
+  </div>
+</div>
